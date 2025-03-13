@@ -14,8 +14,8 @@ public class JobMapper {
         job.setDescription(jobDTO.getDescription());
         job.setTitle(jobDTO.getTitle());
         job.setScore(jobDTO.getScore());
-        job.setCreatedTime(LocalDateTime.now());
-        job.setUpdatedTime(LocalDateTime.now());
+        job.setCreatedTime(ZonedDateTime.now().toString());
+        job.setUpdatedTime(ZonedDateTime.now().toString());
         return job;
     }
     public static void updateJob(JobDTO job,Job currentJob) {
@@ -31,6 +31,6 @@ public class JobMapper {
         if(job.getIsFinished() != null) {
             currentJob.setIsFinished(job.getIsFinished());
         }
-        currentJob.setUpdatedTime(LocalDateTime.now());
+        currentJob.setUpdatedTime(ZonedDateTime.now().toString());
     }
 }

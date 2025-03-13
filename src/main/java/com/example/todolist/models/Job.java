@@ -17,7 +17,7 @@ public class Job {
     private String title;
     private String description;
     private Boolean isFinished;
-    private LocalDateTime createdTime;
-    private LocalDateTime updatedTime;
+    private String createdTime;
+    private String updatedTime;
     private Integer score;
 }
